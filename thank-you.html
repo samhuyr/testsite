@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - WebVazarITSolutions</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .thank-you-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #f6fafd 0%, #e3f2fd 100%);
+            padding: 2rem;
+        }
+        .thank-you-card {
+            background: #fff;
+            border-radius: 2rem;
+            box-shadow: 0 8px 32px rgba(64,196,255,0.13);
+            padding: 3rem;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            border: 1.5px solid #e0e0e0;
+            animation: fadeInUp 0.8s cubic-bezier(.4,0,.2,1);
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: none; }
+        }
+        .thank-you-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 1.5rem;
+            background: #e0f7fa;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #20bfa9;
+            font-size: 2.5rem;
+        }
+        .thank-you-title {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #20bfa9;
+            margin-bottom: 1rem;
+            letter-spacing: 0.5px;
+        }
+        .thank-you-message {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        .back-button {
+            display: inline-block;
+            background: linear-gradient(90deg, #20bfa9 0%, #40c4ff 100%);
+            color: #fff;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: none;
+            cursor: pointer;
+        }
+        .back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(64,196,255,0.18);
+        }
+    </style>
+</head>
+<body>
+    <div class="thank-you-container">
+        <div class="thank-you-card">
+            <div class="thank-you-icon">✓</div>
+            <h1 class="thank-you-title">Thank You!</h1>
+            <p class="thank-you-message">
+                Your message has been received. We appreciate your interest in our services and will get back to you shortly.
+            </p>
+            <a href="index.html" class="back-button">Back to Home</a>
+        </div>
+    </div>
+
+    <script>
+        // Retrieve and display form data if needed
+        document.addEventListener('DOMContentLoaded', function() {
+            const formData = JSON.parse(localStorage.getItem('contactFormData'));
+            if (formData) {
+                // You can display the form data here if needed
+                console.log('Form data:', formData);
+                // Clear the stored data
+                localStorage.removeItem('contactFormData');
+            }
+        });
+    </script>
+</body>
+</html> 
